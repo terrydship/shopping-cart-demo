@@ -8,7 +8,7 @@ import com.trackunit.shoppingcart.model.Cart;
  */
 
 public interface ShoppingCartService {
-    Cart getCartItems(String userId);
+    Cart getCart(String userId);
     Cart addItemToCart(String userId, CartDTO cartDTO);
     Cart updateCartItem(String userId, String itemId, CartDTO cartDTO);
     boolean deleteCartItem(String userId, String itemId);

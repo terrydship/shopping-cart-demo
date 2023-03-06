@@ -32,7 +32,7 @@ class ShoppingCartControllerTest {
     private ShoppingCartController shoppingCartController;
 
     @Test
-    public void testGetCartItems() {
+    public void testGetCart() {
         Cart mockCart = new Cart();
         List<CartItem> cartItemList = new ArrayList<>();
 
@@ -56,10 +56,10 @@ class ShoppingCartControllerTest {
         cartItemList.add(cartItem_2);
         mockCart.setCartItemList(cartItemList);
 
-        when(shoppingCartService.getCartItems(anyString())).thenReturn(mockCart);
+        when(shoppingCartService.getCart(anyString())).thenReturn(mockCart);
 
         Cart cart = shoppingCartController.getCart(anyString());
-        verify(shoppingCartService, times(1)).getCartItems(anyString());
+        verify(shoppingCartService, times(1)).getCart(anyString());
         assertEquals(2, cart.getCartItemList().size());
         assertEquals(BigDecimal.valueOf(105), cart.getTotal());
     }
@@ -84,6 +84,7 @@ class ShoppingCartControllerTest {
 
         Cart cart = shoppingCartController.addItemToCart(anyString(), any());
         verify(shoppingCartService, times(1)).addItemToCart(anyString(), any());
+        assertEquals(1, cart.getCartItemList().size());
         assertEquals(BigDecimal.valueOf(50), cart.getTotal());
     }
 

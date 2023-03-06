@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ShoppingCartServiceImpl implements ShoppingCartService {
     @Override
-    public Cart getCartItems(String userId) {
+    public Cart getCart(String userId) {
         return new Cart();
     }
 

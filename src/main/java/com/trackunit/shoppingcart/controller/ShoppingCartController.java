@@ -21,7 +21,7 @@ public class ShoppingCartController {
     @ApiOperation("Get shopping cart info for a given user.")
     @GetMapping("users/{userId}/cart")
     public Cart getCart(@PathVariable String userId) {
-        return shoppingCartService.getCartItems(userId);
+        return shoppingCartService.getCart(userId);
     }
 
     @ApiOperation("Add item to shopping cart for a given user.")
