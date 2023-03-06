@@ -26,7 +26,7 @@ There are 3 ways to run this Spring Boot application.
 
 * Clone the project from [GitHub](https://github.com/terrydship/shopping-cart-demo) to your local IDE (i.e. IntelliJ)
 * Download and resolve all the maven dependencies.
-* Run `ShoppingcartDemoApplication.java` to start the application, alternatively run the following command in the terminal.
+* Run `ShoppingCartDemoApplication.java` to start the application, alternatively run the following command in the terminal.
 ```
 mvn spring-boot:run
 ```
